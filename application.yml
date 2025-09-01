@@ -1,0 +1,23 @@
+# Configurações globais
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+management: # Configuração do Actuator
+  server:
+    base-path: /monitor
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
