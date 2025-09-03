@@ -9,7 +9,7 @@ management: # Configuração do Actuator
   endpoints:
     web:
       exposure:
-        include: health, info
+        include: health, info, metrics, env, beans, loggers
   endpoint:
     health:
       show-details: always
