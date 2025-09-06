@@ -23,4 +23,4 @@ eureka:
     fetch-registry: true
 
 teste: 
-  fonte: "config-git, valor-dev."
+  fonte: "config-git, valor-principal."
