@@ -25,7 +25,5 @@ teste:
   fonte: "config-git, testando o yml do git."
 
 spring:
-  application:
-    name: user-service
   profiles:
     active: dev
