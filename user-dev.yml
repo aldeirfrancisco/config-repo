@@ -1,1 +1,2 @@
-teste: fonte: "config-git, valor-dev."
+teste: 
+  fonte: "config-git, valor-dev."
