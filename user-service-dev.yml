@@ -1,7 +1,3 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh, health, info
+
 teste: 
   fonte: "config-git, valor-dev."
