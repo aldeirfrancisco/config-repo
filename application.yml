@@ -23,7 +23,3 @@ eureka:
     fetch-registry: true
 teste:
   fonte: "config-git, testando o yml do git."
-
-spring:
-  profiles:
-    active: dev
