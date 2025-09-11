@@ -5,3 +5,10 @@ management:
         include: refresh, health, info
 teste: 
   fonte: "config-git, valor-dev."
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
