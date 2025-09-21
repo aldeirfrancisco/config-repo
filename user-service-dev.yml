@@ -3,6 +3,9 @@ management:
     web:
       exposure:
         include: refresh, health, info
+  health:
+    circuitbreakers:
+      enabled: true
 teste: 
   fonte: "config-git, valor-dev."
 feign:
