@@ -29,8 +29,4 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slowCallDurationThreshold: 2s    # acima disso, conta como "lento"
         slowCallRateThreshold: 50        # % de chamadas lentas que abre o circuito
-        recordExceptions:
-          - feign.FeignException 
-          - feign.RetryableException
-        ignoreExceptions:
-          - org.springframework.web.client.HttpClientErrorException$NotFound
+   
