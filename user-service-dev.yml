@@ -30,9 +30,6 @@ resilience4j:
         slowCallDurationThreshold: 2s    # acima disso, conta como "lento"
         slowCallRateThreshold: 50        # % de chamadas lentas que abre o circuito
         recordExceptions:
-          - feign.FeignException
-          - java.io.IOException
-          - feign.RetryableException 
-          - java.net.ConnectException 
+          - feign.FeignException 
         ignoreExceptions:
           - org.springframework.web.client.HttpClientErrorException$NotFound
