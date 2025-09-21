@@ -29,4 +29,6 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slowCallDurationThreshold: 2s    # acima disso, conta como "lento"
         slowCallRateThreshold: 50        # % de chamadas lentas que abre o circuito
-   
+        recordExceptions:
+          - feign.RetryableException
+          - java.io.IOException
