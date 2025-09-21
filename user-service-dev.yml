@@ -32,3 +32,4 @@ resilience4j:
         recordExceptions:
           - feign.RetryableException
           - java.io.IOException
+          - java.lang.Exception
