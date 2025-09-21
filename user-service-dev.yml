@@ -32,6 +32,7 @@ resilience4j:
         recordExceptions:
           - feign.FeignException
           - java.io.IOException
-          - feign.RetryableException   # <--- adicione isto
+          - feign.RetryableException 
+          - java.net.ConnectException 
         ignoreExceptions:
           - org.springframework.web.client.HttpClientErrorException$NotFound
