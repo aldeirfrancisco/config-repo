@@ -33,4 +33,3 @@ resilience4j:
           - feign.RetryableException
           - java.io.IOException
           - java.lang.Exception
-          - FeignException
