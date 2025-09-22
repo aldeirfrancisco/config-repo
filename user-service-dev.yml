@@ -6,8 +6,10 @@ management:
   health:
     circuitbreakers:
       enabled: true
-teste: 
+
+teste:
   fonte: "config-git, valor-dev."
+
 feign:
   client:
     config:
@@ -15,23 +17,23 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: full
+
 resilience4j:
   circuitbreaker:
     instances:
       endereco-user:
-        registerHealthIndicator: true    # Permite monitorar a saúde do seu serviço protegido pelo Circuit Breaker.
-        slidingWindowType: COUNT_BASED   # é a janela usada para calcular a taxa de falhas e decidir se o Circuit Breaker deve abrir. ou TIME_BASED
-        slidingWindowSize: 2            # quantidade de chamadas analisadas
-        recordSuccess: true
-        minimumNumberOfCalls: 1          # mínimo de chamadas para ativar cálculo
-        failureRateThreshold: 50         # % de falhas para abrir o circuito
-        waitDurationInOpenState: 10s     # tempo de espera antes de ir para HALF_OPEN
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 2               # janela pequena para teste rápido
+        minimumNumberOfCalls: 1            # mínimo de chamadas para ativar cálculo
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
-        slowCallDurationThreshold: 2s    # acima disso, conta como "lento"
-        slowCallRateThreshold: 50        # % de chamadas lentas que abre o circuito
+        slowCallDurationThreshold: 2s
+        slowCallRateThreshold: 50
         recordExceptions:
           - feign.RetryableException
           - java.io.IOException
           - java.lang.Exception
-        
+        recordSuccess: true               # ⚡ conta também chamadas bem-sucedidas
