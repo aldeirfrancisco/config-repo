@@ -22,6 +22,7 @@ resilience4j:
         registerHealthIndicator: true    # Permite monitorar a saúde do seu serviço protegido pelo Circuit Breaker.
         slidingWindowType: COUNT_BASED   # é a janela usada para calcular a taxa de falhas e decidir se o Circuit Breaker deve abrir. ou TIME_BASED
         slidingWindowSize: 2            # quantidade de chamadas analisadas
+        recordSuccess: true
         minimumNumberOfCalls: 1          # mínimo de chamadas para ativar cálculo
         failureRateThreshold: 50         # % de falhas para abrir o circuito
         waitDurationInOpenState: 10s     # tempo de espera antes de ir para HALF_OPEN
@@ -33,3 +34,4 @@ resilience4j:
           - feign.RetryableException
           - java.io.IOException
           - java.lang.Exception
+        
